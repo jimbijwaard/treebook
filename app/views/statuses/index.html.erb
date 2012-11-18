@@ -5,8 +5,11 @@
 <% @statuses.each do |status| %>
 
 
-  <div class="status">
-
+  <div class="status row">
+  <div class="one columns">
+    <%= image_tag status.user.gravatar_url %>
+  </div>
+  <div class="eleven columns">
     <strong><%= status.user.full_name %></strong>
     <p><%= status.content %></p>
 
@@ -17,6 +20,7 @@
         | <%= link_to 'Destroy', status, method: :delete, data: { confirm: 'Weet je het zeker?' } %>
       </span>
     </div>
+  </div>
 
   </div>
 
